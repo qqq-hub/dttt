@@ -1,0 +1,28 @@
+{
+
+  "ts-node": {
+    "files": true
+  },
+  "files": [
+    "src/types.d.ts"
+  ],
+  "compilerOptions": {
+    "allowJs": true,
+    "checkJs": true,
+    "forceConsistentCasingInFileNames": true,
+    "resolveJsonModule": true,
+    "skipLibCheck": true,
+    "types": ["node"],
+    "esModuleInterop": true,
+    "moduleResolution": "node",
+    "outDir": "dist",
+    "sourceMap": true,
+    "strictNullChecks": true,
+    "downlevelIteration": true
+  },
+  "include": [
+    "src/**/*",
+    "test"
+  ],
+  "exclude": ["node_modules"]
+}

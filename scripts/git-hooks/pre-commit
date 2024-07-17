@@ -1,0 +1,12 @@
+#!/bin/sh
+FILES=$(git diff HEAD --name-only --diff-filter=ACMR "*.js" "*.ts" "*.svelte" | sed 's| |\\ |g')
+[ -z "$FILES" ] && exit 0
+
+# Prettify all selected files
+echo "$FILES" | xargs ./node_modules/.bin/prettier --write --plugin-search-dir=.
+
+# Add back the modified/prettified files to staging
+echo "$FILES" | xargs git add
+
+
+exit 0
